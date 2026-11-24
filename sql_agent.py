@@ -20,7 +20,7 @@ from pydantic import BaseModel, Field
 
 from db_setup import DEFAULT_DB_PATH
 
-MODEL_NAME = "gemini-2.5-flash"
+MODEL_NAME = "gemini-3.8-flash"
 
 # Keywords and SQL syntax patterns forbidden in read-only analytics queries.
 FORBIDDEN_KEYWORD_PATTERN = re.compile(

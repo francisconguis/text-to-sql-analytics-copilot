@@ -1,6 +1,6 @@
 # Text-to-SQL Business Analytics Copilot
 
-An interactive, production-ready AI analytics copilot for startup founders and operators. Ask plain-English business questions and get transparent, read-only SQL queries, KPI metrics, interactive Plotly visualizations, and downloadable CSV tables powered by **Gemini 2.5 Flash** (`google-genai`), **Streamlit**, **SQLite**, **Pandas**, and **Plotly**.
+An interactive, production-ready AI analytics copilot for startup founders and operators. Ask plain-English business questions and get transparent, read-only SQL queries, KPI metrics, interactive Plotly visualizations, and downloadable CSV tables powered by **Gemini 3.8 Flash** (`google-genai`), **Streamlit**, **SQLite**, **Pandas**, and **Plotly**.
 
 ---
 
@@ -10,7 +10,7 @@ An interactive, production-ready AI analytics copilot for startup founders and o
 flowchart LR
     U["User Question (Streamlit UI)"] --> A["sql_agent.py (Schema Extractor)"]
     DB[("retail_analytics.db (SQLite)")] -. "PRAGMA table_info & Domain Values" .-> A
-    A --> G["Gemini 2.5 Flash (Pydantic Structured Output)"]
+    A --> G["Gemini 3.8 Flash (Pydantic Structured Output)"]
     G --> V["Layer 1: Regex SQL Safety Validator"]
     V --> R["Layer 2: SQLite Read-Only URI (?mode=ro)"]
     R --> DB
